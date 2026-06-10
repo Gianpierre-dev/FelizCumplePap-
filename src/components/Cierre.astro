@@ -1,0 +1,22 @@
+---
+import EscudoU from "../assets/escudo-u.svg";
+import { dedicatoria } from "../data/guion";
+---
+<section class="flex min-h-screen flex-col items-center justify-center bg-crema px-8 text-center">
+  <EscudoU
+    width={84}
+    height={84}
+    role="img"
+    aria-label="Escudo del Club Universitario de Deportes"
+    class="revelar mb-6"
+  />
+  <h2 class="font-titulo text-2xl font-semibold text-tinta">Te queremos, papá</h2>
+  <p class="mt-1 text-sm text-tinta-suave">{dedicatoria.firma}</p>
+  <button
+    type="button"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="mt-6 rounded-full border border-granate px-5 py-2 text-sm font-semibold text-granate"
+  >
+    🔁 Volver a ver
+  </button>
+</section>
