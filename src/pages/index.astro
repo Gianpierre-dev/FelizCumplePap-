@@ -1,17 +1,35 @@
 ---
-
+import Base from "../layouts/Base.astro";
+import Portada from "../components/Portada.astro";
+import Apertura from "../components/Apertura.astro";
+import EscenaFoto from "../components/EscenaFoto.astro";
+import EscenaVideo from "../components/EscenaVideo.astro";
+import Dedicatoria from "../components/Dedicatoria.astro";
+import Cierre from "../components/Cierre.astro";
+import ReproductorAudio from "../components/ReproductorAudio.astro";
+import { guion } from "../data/guion";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base titulo="Feliz cumpleaños, papá">
+  <Portada />
+  <ReproductorAudio />
+  <main>
+    {
+      guion.map((escena) => {
+        if (escena.tipo === "frase") return <Apertura texto={escena.texto} />;
+        if (escena.tipo === "foto")
+          return <EscenaFoto imagen={escena.imagen} frase={escena.frase} familiar={escena.familiar} />;
+        // escena.tipo === "video"
+        return (
+          <EscenaVideo
+            video={escena.video}
+            poster={escena.poster}
+            frase={escena.frase}
+            familiar={escena.familiar}
+          />
+        );
+      })
+    }
+    <Dedicatoria />
+    <Cierre />
+  </main>
+</Base>
