@@ -24,3 +24,7 @@ body {
   color: var(--color-tinta);
   -webkit-font-smoothing: antialiased;
 }
+
+body {
+  overflow: hidden; /* el script lo libera al tocar "Comenzar" */
+}

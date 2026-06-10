@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import { resolverImagen } from "../data/assets";
+import type { Familiar } from "../data/guion";
+
+interface Props {
+  imagen: string;
+  frase?: string;
+  familiar?: Familiar;
+}
+const { imagen, frase, familiar } = Astro.props;
+const fuente = resolverImagen(imagen);
+---
+<section class="relative flex min-h-screen flex-col">
+  <div class="relative flex-1 overflow-hidden">
+    <Image src={fuente} alt={frase ?? "Recuerdo familiar"} class="parallax h-full w-full object-cover" />
+    {familiar && (
+      <span class="absolute bottom-4 left-4 rounded-full border border-granate bg-crema/90 px-3 py-1 text-xs text-granate">
+        📍 con {familiar}
+      </span>
+    )}
+  </div>
+  {frase && <p class="revelar bg-crema px-6 py-5 text-center font-titulo text-lg text-tinta">{frase}</p>}
+</section>

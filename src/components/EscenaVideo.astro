@@ -1,0 +1,31 @@
+---
+import { resolverPoster, rutaVideo } from "../data/assets";
+import type { Familiar } from "../data/guion";
+
+interface Props {
+  video: string;
+  poster: string;
+  frase?: string;
+  familiar?: Familiar;
+}
+const { video, poster, frase, familiar } = Astro.props;
+const fuentePoster = resolverPoster(poster);
+---
+<section class="relative flex min-h-screen flex-col">
+  <div class="relative flex-1 overflow-hidden bg-black">
+    <video
+      class="h-full w-full object-cover"
+      src={rutaVideo(video)}
+      poster={fuentePoster.src}
+      controls
+      playsinline
+      preload="metadata"
+    ></video>
+    {familiar && (
+      <span class="absolute bottom-4 left-4 z-10 rounded-full border border-granate bg-crema/90 px-3 py-1 text-xs text-granate">
+        📍 con {familiar}
+      </span>
+    )}
+  </div>
+  {frase && <p class="revelar bg-crema px-6 py-5 text-center font-titulo text-lg text-tinta">{frase}</p>}
+</section>

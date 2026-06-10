@@ -1,0 +1,25 @@
+---
+---
+<section
+  data-portada
+  class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-crema px-6 text-center transition-opacity duration-700"
+>
+  <p class="mb-3 rounded-full border border-granate/40 px-3 py-1 text-xs text-granate">🎈 13 de junio</p>
+  <h1 class="font-titulo text-3xl font-semibold text-tinta">Feliz cumpleaños, papá</h1>
+  <p class="mt-2 text-sm text-tinta-suave">Toda tu familia, desde el Perú</p>
+  <button
+    data-comenzar
+    type="button"
+    class="mt-6 rounded-full bg-granate px-6 py-3 text-sm font-semibold text-crema"
+  >
+    ▶ Tocar para comenzar
+  </button>
+  <p class="mt-2 text-xs text-tinta-suave">(con sonido)</p>
+</section>
+
+<style>
+  :global([data-portada].oculto) {
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>
