@@ -1,6 +1,9 @@
 // Inicia la música tras el gesto del usuario (política de autoplay),
 // controla el mute y aplica el fallback de revelado.
 
+// Marca que el JS está activo: habilita el bloqueo de scroll y el control de la portada.
+document.documentElement.classList.add("js");
+
 function iniciarExperiencia(): void {
   const audio = document.querySelector<HTMLAudioElement>("#cancion");
   const botonComenzar = document.querySelector<HTMLButtonElement>("[data-comenzar]");
@@ -10,6 +13,8 @@ function iniciarExperiencia(): void {
     void audio?.play().catch(() => undefined);
     portada?.classList.add("oculto");
     document.body.style.overflow = "auto";
+    portada?.setAttribute("inert", "");
+    document.querySelector<HTMLElement>("main")?.focus();
   });
 
   const botonMute = document.querySelector<HTMLButtonElement>("[data-mute]");

@@ -14,6 +14,11 @@ const { titulo } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{titulo}</title>
     <meta name="description" content="Un regalo de cumpleaños de toda tu familia." />
+    <noscript>
+      <style>
+        [data-portada] { display: none; }
+      </style>
+    </noscript>
   </head>
   <body>
     <slot />

@@ -18,6 +18,12 @@ html {
   background-color: var(--color-crema);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   margin: 0;
   font-family: var(--font-texto);
@@ -25,6 +31,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body {
-  overflow: hidden; /* el script lo libera al tocar "Comenzar" */
+/* El bloqueo de scroll solo aplica si el JS está activo (clase añadida por el script).
+   Sin JS, la página queda navegable como degradación elegante. */
+html.js body {
+  overflow: hidden;
 }

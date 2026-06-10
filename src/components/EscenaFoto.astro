@@ -13,7 +13,7 @@ const fuente = resolverImagen(imagen);
 ---
 <section class="relative flex min-h-screen flex-col">
   <div class="relative flex-1 overflow-hidden">
-    <Image src={fuente} alt={frase ?? "Recuerdo familiar"} class="parallax h-full w-full object-cover" />
+    <Image src={fuente} alt={frase ?? (familiar ? `Recuerdo con ${familiar}` : "Recuerdo familiar")} class="parallax h-full w-full object-cover" />
     {familiar && (
       <span class="absolute bottom-4 left-4 rounded-full border border-granate bg-crema/90 px-3 py-1 text-xs text-granate">
         📍 con {familiar}

@@ -1,4 +1,5 @@
-export type Familiar = "mamá" | "Cesar" | "Steven";
+// Texto de display libre (se renderiza tal cual en el pie de foto, no es una clave de dominio).
+export type Familiar = string;
 
 export type Escena =
   | { tipo: "frase"; texto: string }

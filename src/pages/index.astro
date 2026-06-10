@@ -12,7 +12,7 @@ import { guion } from "../data/guion";
 <Base titulo="Feliz cumpleaños, papá">
   <Portada />
   <ReproductorAudio />
-  <main>
+  <main tabindex="-1">
     {
       guion.map((escena) => {
         if (escena.tipo === "frase") return <Apertura texto={escena.texto} />;

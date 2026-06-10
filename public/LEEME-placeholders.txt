@@ -83,7 +83,9 @@ Notas:
   - "imagen" y "poster" usan el nombre del archivo (sin ruta).
   - "video" usa el nombre del .mp4 que pusiste en public/videos/.
   - "frase" y "familiar" son opcionales.
-  - "familiar" solo acepta: "mamá", "Cesar" o "Steven".
+  - "familiar" acepta cualquier nombre o texto (ej: "mamá",
+    "Cesar", "los abuelos", "Gianpierre"). Se muestra tal cual en la
+    etiqueta sobre la foto.
 
 
 ------------------------------------------------------------
