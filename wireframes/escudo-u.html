@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">|
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escudo U en SVG — muestra</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",system-ui,sans-serif;background:#f4ecdf;color:#4a3826;
+    padding:40px 20px;text-align:center}
+  h1{font-size:20px;margin-bottom:6px}
+  p{color:#7a6450;font-size:13px;margin-bottom:30px}
+  .row{display:flex;gap:40px;align-items:flex-end;justify-content:center;flex-wrap:wrap;margin-bottom:34px}
+  .item{display:flex;flex-direction:column;align-items:center;gap:8px}
+  .item span{font-size:11px;color:#7a6450;font-family:monospace}
+  .dark{background:#14100c;padding:20px;border-radius:12px}
+  .note{max-width:560px;margin:0 auto;font-size:13px;line-height:1.6;background:#fff7ea;
+    border:1px solid #e6d6ba;border-radius:12px;padding:16px 20px}
+</style>
+</head>
+<body>
+<h1>🏆 Escudo de la U — versión vectorial (SVG)</h1>
+<p>Misma forma a distintos tamaños · siempre nítido · color granate de la paleta</p>
+
+<div class="row">
+  <!-- grande -->
+  <div class="item">
+    <svg width="120" height="140" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 4 L112 22 L112 64 C112 104 88 126 60 136 C32 126 8 104 8 64 L8 22 Z"
+        fill="#f9f3e8" stroke="#6e1f2e" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M38 36 L38 74 C38 90 48 98 60 98 C72 98 82 90 82 74 L82 36"
+        fill="none" stroke="#6e1f2e" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>120 px</span>
+  </div>
+  <!-- medio -->
+  <div class="item">
+    <svg width="72" height="84" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 4 L112 22 L112 64 C112 104 88 126 60 136 C32 126 8 104 8 64 L8 22 Z"
+        fill="#f9f3e8" stroke="#6e1f2e" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M38 36 L38 74 C38 90 48 98 60 98 C72 98 82 90 82 74 L82 36"
+        fill="none" stroke="#6e1f2e" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>72 px</span>
+  </div>
+  <!-- chico -->
+  <div class="item">
+    <svg width="40" height="47" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 4 L112 22 L112 64 C112 104 88 126 60 136 C32 126 8 104 8 64 L8 22 Z"
+        fill="#f9f3e8" stroke="#6e1f2e" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M38 36 L38 74 C38 90 48 98 60 98 C72 98 82 90 82 74 L82 36"
+        fill="none" stroke="#6e1f2e" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>40 px</span>
+  </div>
+  <!-- sobre oscuro / invertido -->
+  <div class="item">
+    <div class="dark">
+      <svg width="72" height="84" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M60 4 L112 22 L112 64 C112 104 88 126 60 136 C32 126 8 104 8 64 L8 22 Z"
+          fill="#f4ecdf" stroke="#f4ecdf" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M38 36 L38 74 C38 90 48 98 60 98 C72 98 82 90 82 74 L82 36"
+          fill="none" stroke="#6e1f2e" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <span>sobre crema</span>
+  </div>
+</div>
+
+<div class="note">
+  Es una <b>interpretación limpia</b> del escudo (forma + la "U" granate), hecha 100% en código.
+  Si la querés <b>idéntica al escudo oficial</b> con todos sus detalles, lo mejor es que me pases
+  vos la imagen oficial en buena calidad y la vectorizo fiel. Pero para un detalle de cierre,
+  esta versión sobria suele quedar más elegante que el escudo completo.
+</div>
+</body>
+</html>

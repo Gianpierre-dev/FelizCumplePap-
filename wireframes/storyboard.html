@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframes v2 — Feliz Cumple Papá</title>
+<style>
+  :root{
+    --ink:#2b2b2b; --line:#9aa0a6; --soft:#c7ccd1; --bg:#eceff1;
+    --frame:#fff; --label:#5f6368; --accent:#444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);
+    color:var(--ink);padding:32px 20px 80px;line-height:1.4;
+  }
+  header{max-width:1200px;margin:0 auto 28px;text-align:center}
+  header h1{font-size:22px;letter-spacing:.3px;margin-bottom:6px}
+  header p{color:var(--label);font-size:14px}
+  .legend{
+    max-width:1200px;margin:0 auto 36px;display:flex;gap:18px;
+    flex-wrap:wrap;justify-content:center;font-size:12px;color:var(--label)
+  }
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .swatch{width:26px;height:14px;border:1px dashed var(--line);border-radius:3px}
+  .swatch.photo{background:repeating-linear-gradient(45deg,#dfe3e6,#dfe3e6 6px,#eceff1 6px,#eceff1 12px)}
+  .swatch.text{background:#fff;border:1px solid var(--soft)}
+
+  .grid{
+    max-width:1200px;margin:0 auto;display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:34px 28px;justify-items:center;
+  }
+  .scene{width:100%;max-width:280px}
+  .scene .cap{
+    text-align:center;font-size:12px;color:var(--label);margin-bottom:10px;
+  }
+  .scene .cap b{display:block;color:var(--ink);font-size:13px;letter-spacing:.4px;text-transform:uppercase}
+
+  .phone{
+    background:var(--frame);border:2px solid var(--ink);border-radius:26px;
+    padding:10px 8px;box-shadow:0 6px 18px rgba(0,0,0,.08);position:relative;
+    height:480px;display:flex;flex-direction:column;overflow:hidden;
+  }
+  .phone::before{
+    content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);
+    width:46px;height:5px;background:var(--soft);border-radius:3px;
+  }
+  .screen{flex:1;margin-top:14px;display:flex;flex-direction:column;
+    border-radius:16px;overflow:hidden;position:relative}
+
+  .photo{background:repeating-linear-gradient(45deg,#dfe3e6,#dfe3e6 8px,#f2f4f5 8px,#f2f4f5 16px);
+    position:relative;display:flex;align-items:center;justify-content:center;color:#9099a0;font-size:11px}
+  .photo::after{content:"🖼";font-size:22px;opacity:.5;position:absolute}
+  .video::after{content:"▶";font-size:20px;color:#fff;background:rgba(0,0,0,.4);
+    width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .line{height:7px;background:var(--soft);border-radius:4px;margin:5px 0}
+  .line.sm{width:55%} .line.md{width:75%} .line.lg{width:92%} .line.xs{width:38%}
+  .line.center{margin-left:auto;margin-right:auto}
+  .center{text-align:center}
+  .pad{padding:14px}
+  .btn{border:1.5px solid var(--ink);border-radius:22px;padding:9px 0;text-align:center;
+    font-size:12px;font-weight:600;margin:6px auto 0;width:75%}
+  .chip{display:inline-block;border:1px solid var(--line);border-radius:12px;
+    padding:2px 9px;font-size:10px;color:var(--label);margin-bottom:8px}
+  .music{position:absolute;top:20px;right:14px;width:30px;height:30px;border-radius:50%;
+    border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;
+    font-size:13px;background:#fff;z-index:5}
+  .scrollcue{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+    font-size:16px;color:var(--label);animation:bob 1.4s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,5px)}}
+  .tag{position:absolute;top:8px;left:8px;font-size:9px;letter-spacing:.5px;
+    background:var(--ink);color:#fff;padding:2px 7px;border-radius:4px;z-index:6}
+  .pin{position:absolute;bottom:10px;left:10px;font-size:9px;background:rgba(255,255,255,.92);
+    border:1px solid var(--soft);border-radius:10px;padding:2px 8px;color:var(--accent);z-index:6}
+  .name{font-size:11px;font-weight:700;color:var(--accent);margin-bottom:2px}
+  .flow{max-width:1200px;margin:0 auto 30px;text-align:center;font-size:12px;color:var(--label)}
+  .repeat{border:2px dashed var(--line);border-radius:26px;height:480px;display:flex;
+    align-items:center;justify-content:center;text-align:center;color:var(--label);
+    font-size:12px;padding:20px;background:repeating-linear-gradient(45deg,#e6e9eb,#e6e9eb 10px,#eceff1 10px,#eceff1 20px)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎂 Feliz Cumpleaños, Papá — Wireframes v2</h1>
+  <p>Mobile-first · scroll cinematográfico · tu voz de fondo · regalo de TODA la familia · 13 de junio</p>
+</header>
+
+<div class="legend">
+  <span><span class="swatch photo"></span> Foto / video</span>
+  <span><span class="swatch text"></span> Texto / dedicatoria</span>
+  <span>🔊 Música (siempre)</span>
+  <span>📍 Pie de foto que ancla a la familia</span>
+  <span>⌄ Scroll</span>
+</div>
+
+<div class="flow">Un solo recorrido de arriba ↓ abajo · las fotos de mamá, Cesar y Steven con papá viven DENTRO de los recuerdos</div>
+
+<div class="grid">
+
+  <!-- 1. PORTADA -->
+  <div class="scene">
+    <div class="cap"><b>1 · Portada</b>lo primero al abrir el link</div>
+    <div class="phone"><div class="screen photo">
+      <div class="tag">PANTALLA COMPLETA</div>
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,.04)"></div>
+      <div class="pad center" style="position:relative;z-index:2;margin:auto">
+        <div class="chip">🎈 13 de junio</div>
+        <div class="line lg center"></div>
+        <div class="line md center" style="height:11px;background:#b6bcc1"></div>
+        <div class="line sm center"></div>
+        <div class="btn">▶ Tocá para comenzar</div>
+        <div style="font-size:9px;color:#9099a0;margin-top:8px">(arranca tu canción 🎵)</div>
+      </div>
+      <div class="scrollcue">⌄</div>
+    </div></div>
+  </div>
+
+  <!-- 2. APERTURA -->
+  <div class="scene">
+    <div class="cap"><b>2 · Apertura</b>la frase que abre el corazón</div>
+    <div class="phone"><div class="screen">
+      <div class="music">🔊</div>
+      <div class="pad center" style="margin:auto">
+        <div style="font-size:20px;margin-bottom:14px">💌</div>
+        <div class="line lg center"></div>
+        <div class="line lg center"></div>
+        <div class="line md center"></div>
+        <div style="font-size:9px;color:#9099a0;margin-top:14px">"Aunque estés lejos,<br>hoy estamos todos<br>contigo…"</div>
+      </div>
+      <div class="scrollcue">⌄</div>
+    </div></div>
+  </div>
+
+  <!-- 3. RECUERDO foto general -->
+  <div class="scene">
+    <div class="cap"><b>3 · Recuerdo</b>foto + frase corta tuya</div>
+    <div class="phone"><div class="screen">
+      <div class="music">🔊</div>
+      <div class="photo" style="flex:1;border-radius:0"><div class="tag">FOTO</div></div>
+      <div class="pad center" style="flex-shrink:0">
+        <div class="line md center"></div>
+        <div class="line sm center"></div>
+      </div>
+      <div class="scrollcue">⌄</div>
+    </div></div>
+  </div>
+
+  <!-- 4. RECUERDO con mamá (pin) -->
+  <div class="scene">
+    <div class="cap"><b>4 · Recuerdo con mamá</b>misma estructura + pie que ancla</div>
+    <div class="phone"><div class="screen">
+      <div class="music">🔊</div>
+      <div class="photo" style="flex:1;border-radius:0">
+        <div class="tag">FOTO</div>
+        <div class="pin">📍 con mamá</div>
+      </div>
+      <div class="pad center" style="flex-shrink:0">
+        <div class="line md center"></div>
+      </div>
+      <div class="scrollcue">⌄</div>
+    </div></div>
+  </div>
+
+  <!-- 5. RECUERDO con Cesar -->
+  <div class="scene">
+    <div class="cap"><b>5 · Recuerdo con Cesar</b>la familia presente en las fotos</div>
+    <div class="phone"><div class="screen">
+      <div class="music">🔊</div>
+      <div class="photo" style="flex:1;border-radius:0">
+        <div class="tag">FOTO</div>
+        <div class="pin">📍 con Cesar</div>
+      </div>
+      <div class="pad center" style="flex-shrink:0">
+        <div class="line sm center"></div>
+      </div>
+      <div class="scrollcue">⌄</div>
+    </div></div>
+  </div>
+
+  <!-- 6. VIDEO -->
+  <div class="scene">
+    <div class="cap"><b>6 · Video</b>uno de los 3, rompe el ritmo</div>
+    <div class="phone"><div class="screen">
+      <div class="music">🔊</div>
+      <div class="photo video" style="flex:1;border-radius:0">
+        <div class="tag">VIDEO</div>
+        <div class="pin">📍 con Steven</div>
+      </div>
+      <div class="pad center" style="flex-shrink:0"><div class="line sm center"></div></div>
+      <div class="scrollcue">⌄</div>
+    </div></div>
+  </div>
+
+  <!-- 7. REPETICION -->
+  <div class="scene">
+    <div class="cap"><b>7 · … y así</b>el patrón se repite</div>
+    <div class="repeat">
+      ↑ Los cuadros 3–6 se repiten<br>con las <b>15 fotos + 3 videos</b><br><br>
+      orden y frases los definís vos<br>en un solo archivo "guion"<br>
+      <span style="font-size:10px">(te lo explico en la parte técnica)</span>
+    </div>
+  </div>
+
+  <!-- 8. DEDICATORIA -->
+  <div class="scene">
+    <div class="cap"><b>8 · Dedicatoria final</b>UN mensaje, de parte de todos</div>
+    <div class="phone"><div class="screen">
+      <div class="music">🔊</div>
+      <div class="tag" style="position:static;align-self:flex-start;margin:8px">💚 DE TU FAMILIA</div>
+      <div class="pad" style="margin:auto 0">
+        <div style="font-size:18px;text-align:center;margin-bottom:10px">✍️</div>
+        <div class="line lg"></div>
+        <div class="line lg"></div>
+        <div class="line lg"></div>
+        <div class="line md"></div>
+        <div class="line lg"></div>
+        <div class="line sm"></div>
+        <div style="text-align:right;font-size:9px;color:var(--accent);margin-top:12px;font-weight:700">
+          — Gaby, Cesar,<br>Steven y Gianpierre
+        </div>
+      </div>
+      <div class="scrollcue">⌄</div>
+    </div></div>
+  </div>
+
+  <!-- 9. CIERRE -->
+  <div class="scene">
+    <div class="cap"><b>9 · Cierre</b>el abrazo final</div>
+    <div class="phone"><div class="screen photo">
+      <div class="music">🔊</div>
+      <div style="position:absolute;inset:0;background:rgba(0,0,0,.05)"></div>
+      <div class="pad center" style="position:relative;z-index:2;margin:auto">
+        <div style="font-size:22px;margin-bottom:10px">❤️</div>
+        <div class="line lg center"></div>
+        <div class="line md center"></div>
+        <div style="font-size:9px;color:#7a8086;margin:10px 0">"Te queremos.<br>Toda tu familia."</div>
+        <div class="btn" style="width:60%">🔁 Volver a ver</div>
+      </div>
+    </div></div>
+  </div>
+
+</div>
+
+</body>
+</html>

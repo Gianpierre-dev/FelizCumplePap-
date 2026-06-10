@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paletas — Feliz Cumple Papá</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",system-ui,sans-serif;background:#e9ecef;color:#222;
+    padding:32px 20px 80px}
+  header{max-width:1000px;margin:0 auto 30px;text-align:center}
+  header h1{font-size:22px;margin-bottom:6px}
+  header p{color:#5f6368;font-size:14px}
+  .wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  @media(max-width:760px){.wrap{grid-template-columns:1fr}}
+
+  .col{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.08)}
+  .col h2{font-size:16px;padding:16px 18px 4px}
+  .col .sub{font-size:12px;color:#5f6368;padding:0 18px 14px}
+  .rec{display:inline-block;font-size:10px;font-weight:700;color:#1a7a3c;
+    border:1px solid #1a7a3c;border-radius:10px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+
+  .swatches{display:flex;gap:0;padding:0 0 0}
+  .sw{flex:1;height:54px;display:flex;align-items:flex-end;justify-content:center;
+    font-size:9px;padding-bottom:4px;font-family:monospace}
+
+  /* phone preview */
+  .preview{padding:20px;display:flex;justify-content:center}
+  .phone{width:240px;height:430px;border:2px solid #111;border-radius:26px;padding:8px;
+    position:relative;overflow:hidden}
+  .scr{width:100%;height:100%;border-radius:18px;overflow:hidden;position:relative;
+    display:flex;flex-direction:column}
+  .ph-photo{flex:1;position:relative;display:flex;align-items:center;justify-content:center;font-size:30px}
+  .ph-body{padding:16px 16px 20px;text-align:center}
+  .ph-chip{display:inline-block;font-size:9px;border-radius:10px;padding:2px 9px;margin-bottom:8px}
+  .ph-title{font-size:17px;font-weight:700;margin-bottom:4px;font-family:Georgia,serif}
+  .ph-sub{font-size:10px;margin-bottom:12px;opacity:.85}
+  .ph-btn{display:inline-block;font-size:11px;font-weight:600;padding:8px 18px;border-radius:20px}
+  .ph-music{position:absolute;top:14px;right:12px;width:26px;height:26px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:11px;z-index:4}
+  .note{font-size:11px;color:#5f6368;padding:0 18px 18px;line-height:1.5}
+
+  /* ---- A: CINE NOCTURNO ---- */
+  .a .ph-photo{background:linear-gradient(160deg,#2a1f16,#14100c)}
+  .a .scr{background:#14100c}
+  .a .ph-title{color:#f5ece0}
+  .a .ph-sub{color:#b8a892}
+  .a .ph-chip{background:rgba(224,168,90,.15);color:#e0a85a;border:1px solid rgba(224,168,90,.4)}
+  .a .ph-btn{background:#e0a85a;color:#2a1c0c}
+  .a .ph-music{border:1.5px solid #e0a85a;color:#e0a85a;background:rgba(0,0,0,.3)}
+  .a .ph-photo::after{content:"👨‍👧‍👦";opacity:.5}
+
+  /* ---- B: ALBUM VINTAGE ---- */
+  .b .ph-photo{background:linear-gradient(160deg,#ead9bf,#dcc6a0)}
+  .b .scr{background:#f4ecdf}
+  .b .ph-title{color:#4a3826}
+  .b .ph-sub{color:#7a6450}
+  .b .ph-chip{background:rgba(168,99,46,.12);color:#a8632e;border:1px solid rgba(168,99,46,.35)}
+  .b .ph-btn{background:#a8632e;color:#f4ecdf}
+  .b .ph-music{border:1.5px solid #a8632e;color:#a8632e;background:rgba(255,255,255,.5)}
+  .b .ph-photo::after{content:"👨‍👧‍👦";opacity:.45;filter:sepia(.5)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎨 Dos direcciones de paleta</h1>
+  <p>Las fotos mandan · la paleta es el marco · tono cálido y nostálgico</p>
+</header>
+
+<div class="wrap">
+
+  <!-- A -->
+  <div class="col a">
+    <h2>A · Cine nocturno <span class="rec">RECOMENDADA</span></h2>
+    <div class="sub">Fondo oscuro cálido + luz dorada. Las fotos BRILLAN como en una sala de cine.</div>
+    <div class="swatches">
+      <div class="sw" style="background:#14100c;color:#caa">#14100C</div>
+      <div class="sw" style="background:#241c15;color:#caa">#241C15</div>
+      <div class="sw" style="background:#e0a85a;color:#3a2a10">#E0A85A</div>
+      <div class="sw" style="background:#f0c987;color:#3a2a10">#F0C987</div>
+      <div class="sw" style="background:#f5ece0;color:#777">#F5ECE0</div>
+    </div>
+    <div class="preview">
+      <div class="phone"><div class="scr">
+        <div class="ph-music">🔊</div>
+        <div class="ph-photo"></div>
+        <div class="ph-body">
+          <div class="ph-chip">🎈 13 de junio</div>
+          <div class="ph-title">Feliz cumpleaños, papá</div>
+          <div class="ph-sub">Toda tu familia, desde Perú</div>
+          <div class="ph-btn">▶ Tocar para comenzar</div>
+        </div>
+      </div></div>
+    </div>
+    <div class="note">
+      <b>Por qué la recomiendo:</b> el fondo oscuro hace resaltar fotos de cualquier época y calidad
+      (incluso las de WhatsApp), potencia la sensación de "experiencia inmersiva" con la música,
+      y el dorado da calidez de luz de vela. Dramático y emotivo.
+    </div>
+  </div>
+
+  <!-- B -->
+  <div class="col b">
+    <h2>B · Álbum / carta vintage</h2>
+    <div class="sub">Fondo papel crema + sepia. Se siente como una carta escrita a mano.</div>
+    <div class="swatches">
+      <div class="sw" style="background:#f4ecdf;color:#777">#F4ECDF</div>
+      <div class="sw" style="background:#ead9bf;color:#777">#EAD9BF</div>
+      <div class="sw" style="background:#a8632e;color:#fff">#A8632E</div>
+      <div class="sw" style="background:#4a3826;color:#fff">#4A3826</div>
+      <div class="sw" style="background:#7a6450;color:#fff">#7A6450</div>
+    </div>
+    <div class="preview">
+      <div class="phone"><div class="scr">
+        <div class="ph-music">🔊</div>
+        <div class="ph-photo"></div>
+        <div class="ph-body">
+          <div class="ph-chip">🎈 13 de junio</div>
+          <div class="ph-title">Feliz cumpleaños, papá</div>
+          <div class="ph-sub">Toda tu familia, desde Perú</div>
+          <div class="ph-btn">▶ Tocar para comenzar</div>
+        </div>
+      </div></div>
+    </div>
+    <div class="note">
+      <b>Cuándo elegirla:</b> si querés que se sienta como un álbum familiar antiguo o una carta de puño y letra.
+      Más luminoso y tierno, menos dramático. Las fotos brillan menos sobre claro, pero el tono "cartita" es hermoso.
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
