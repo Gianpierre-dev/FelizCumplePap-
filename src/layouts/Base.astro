@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+import "../styles/animaciones.css";
+
+interface Props {
+  titulo: string;
+}
+const { titulo } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titulo}</title>
+    <meta name="description" content="Un regalo de cumpleaños de toda tu familia." />
+  </head>
+  <body>
+    <slot />
+    <audio id="cancion" src="/audio/mi-querido-viejo.mp3" loop preload="auto"></audio>
+    <script src="../scripts/experiencia.ts"></script>
+  </body>
+</html>

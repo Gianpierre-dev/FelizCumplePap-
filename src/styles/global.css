@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/inter";
+
+@theme {
+  --color-crema: #f4ecdf;
+  --color-crema-alt: #ead9bf;
+  --color-granate: #6e1f2e;
+  --color-granate-claro: #8a2a3c;
+  --color-tinta: #4a3826;
+  --color-tinta-suave: #7a6450;
+  --font-titulo: "Fraunces Variable", serif;
+  --font-texto: "Inter Variable", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-crema);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-texto);
+  color: var(--color-tinta);
+  -webkit-font-smoothing: antialiased;
+}
