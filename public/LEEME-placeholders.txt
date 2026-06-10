@@ -1,0 +1,111 @@
+============================================================
+ARCHIVOS PROVISIONALES - REEMPLAZAR ANTES DE PUBLICAR
+============================================================
+
+Esta landing usa archivos provisionales (placeholders) para que el
+proyecto compile y se pueda ver funcionando. Debes reemplazarlos con
+el material real (las fotos, los videos y la canción).
+
+Mientras no reemplaces los videos y la canción, la página seguirá
+funcionando: las fotos placeholder se ven, los videos muestran su
+imagen de portada (poster) aunque el .mp4 falte, y la música
+simplemente no suena. Nada se rompe.
+
+
+------------------------------------------------------------
+1) FOTOS  ->  src/assets/fotos/
+------------------------------------------------------------
+Hay 4 fotos provisionales (colores planos):
+  - foto-01.webp
+  - foto-02.webp
+  - foto-03.webp
+  - foto-04.webp
+
+Reemplázalas por tus fotos reales con el MISMO nombre, o agrega las
+15 fotos definitivas con nombres correlativos:
+  foto-01.webp, foto-02.webp, ... foto-15.webp
+
+Formato recomendado: .webp (también acepta .jpg, .jpeg, .png).
+Astro las optimiza automáticamente al compilar.
+
+Luego registra cada foto en el guion (ver punto 4).
+
+
+------------------------------------------------------------
+2) VIDEOS  ->  public/videos/
+------------------------------------------------------------
+Falta el archivo de video real:
+  - public/videos/video-01.mp4   (provisional: aún NO existe)
+
+Coloca aquí tus 3 videos definitivos, por ejemplo:
+  public/videos/video-01.mp4
+  public/videos/video-02.mp4
+  public/videos/video-03.mp4
+
+IMPORTANTE: los videos van en public/videos/ (se sirven directo, no
+se procesan al compilar).
+
+
+------------------------------------------------------------
+3) PORTADAS DE VIDEO (posters)  ->  src/assets/videos/
+------------------------------------------------------------
+Cada video necesita una imagen de portada (poster) que se muestra
+antes de reproducir. Hay 1 poster provisional (color plano):
+  - video-01.webp
+
+Agrega un poster por cada video, con el mismo número:
+  src/assets/videos/video-01.webp
+  src/assets/videos/video-02.webp
+  src/assets/videos/video-03.webp
+
+Formato recomendado: .webp (también acepta .jpg, .jpeg, .png).
+
+
+------------------------------------------------------------
+4) CÓMO ARMAR EL RECORRIDO  ->  src/data/guion.ts
+------------------------------------------------------------
+El orden de las escenas se controla en src/data/guion.ts (arreglo
+"guion"). NO hay que tocar componentes: solo editar ese arreglo.
+
+Tipos de escena disponibles:
+
+  Frase de texto:
+    { tipo: "frase", texto: "Tu mensaje aquí." }
+
+  Foto:
+    { tipo: "foto", imagen: "foto-05.webp", frase: "Texto opcional." }
+    { tipo: "foto", imagen: "foto-06.webp", familiar: "mamá" }
+
+  Video:
+    { tipo: "video", video: "video-02.mp4", poster: "video-02.webp", familiar: "Cesar" }
+
+Notas:
+  - "imagen" y "poster" usan el nombre del archivo (sin ruta).
+  - "video" usa el nombre del .mp4 que pusiste en public/videos/.
+  - "frase" y "familiar" son opcionales.
+  - "familiar" solo acepta: "mamá", "Cesar" o "Steven".
+
+
+------------------------------------------------------------
+5) CANCIÓN  ->  public/audio/
+------------------------------------------------------------
+Falta la canción real:
+  - public/audio/mi-querido-viejo.mp3   (provisional: aún NO existe)
+
+Coloca aquí el archivo con EXACTAMENTE ese nombre:
+  public/audio/mi-querido-viejo.mp3
+
+Si quieres usar otro nombre, cámbialo también en src/layouts/Base.astro
+(etiqueta <audio src="/audio/...">).
+
+
+------------------------------------------------------------
+RESUMEN RÁPIDO
+------------------------------------------------------------
+[ ] 15 fotos en       src/assets/fotos/        (foto-01..15.webp)
+[ ] 3 videos en       public/videos/           (video-01..03.mp4)
+[ ] 3 posters en      src/assets/videos/       (video-01..03.webp)
+[ ] 1 canción en      public/audio/            (mi-querido-viejo.mp3)
+[ ] Recorrido armado en src/data/guion.ts
+
+Cuando termines, ejecuta:  pnpm build
