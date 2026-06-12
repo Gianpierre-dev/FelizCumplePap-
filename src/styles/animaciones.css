@@ -64,20 +64,10 @@
   background: color-mix(in srgb, var(--color-granate) 45%, transparent);
 }
 
-/* Latido del control de música mientras suena la canción */
-.sonando {
-  animation: latido 2.4s ease-in-out infinite;
-}
-@keyframes latido {
-  0%, 100% { box-shadow: 0 0 0 0 rgb(110 31 46 / 0.35); }
-  50% { box-shadow: 0 0 0 9px rgb(110 31 46 / 0); }
-}
-
 /* Respeto a usuarios que reducen movimiento */
 @media (prefers-reduced-motion: reduce) {
   .revelar,
-  .parallax,
-  .sonando {
+  .parallax {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;

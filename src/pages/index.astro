@@ -6,12 +6,10 @@ import EscenaFoto from "../components/EscenaFoto.astro";
 import EscenaVideo from "../components/EscenaVideo.astro";
 import Dedicatoria from "../components/Dedicatoria.astro";
 import Cierre from "../components/Cierre.astro";
-import ReproductorAudio from "../components/ReproductorAudio.astro";
 import { guion } from "../data/guion";
 ---
 <Base titulo="Feliz cumpleaños, papá">
   <Portada />
-  <ReproductorAudio />
   <main tabindex="-1">
     {
       guion.map((escena) => {

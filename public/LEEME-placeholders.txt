@@ -4,9 +4,7 @@ ARCHIVOS PROVISIONALES - REEMPLAZAR ANTES DE PUBLICAR
 
 Esta landing usa archivos provisionales (placeholders) para que el
 proyecto compile y se pueda ver funcionando. Debes reemplazarlos con
-el material real (las fotos, los videos y la canción).
 
-Mientras no reemplaces los videos y la canción, la página seguirá
 funcionando: las fotos placeholder se ven, los videos muestran su
 imagen de portada (poster) aunque el .mp4 falte, y la música
 simplemente no suena. Nada se rompe.
@@ -89,16 +87,11 @@ Notas:
 
 
 ------------------------------------------------------------
-5) CANCIÓN  ->  public/audio/
 ------------------------------------------------------------
-Falta la canción real:
-  - public/audio/mi-querido-viejo.mp3   (provisional: aún NO existe)
 
 Coloca aquí el archivo con EXACTAMENTE ese nombre:
-  public/audio/mi-querido-viejo.mp3
 
 Si quieres usar otro nombre, cámbialo también en src/layouts/Base.astro
-(etiqueta <audio src="/audio/...">).
 
 
 ------------------------------------------------------------
@@ -107,7 +100,6 @@ RESUMEN RÁPIDO
 [ ] 15 fotos en       src/assets/fotos/        (foto-01..15.webp)
 [ ] 3 videos en       public/videos/           (video-01..03.mp4)
 [ ] 3 posters en      src/assets/videos/       (video-01..03.webp)
-[ ] 1 canción en      public/audio/            (mi-querido-viejo.mp3)
 [ ] Recorrido armado en src/data/guion.ts
 
 Cuando termines, ejecuta:  pnpm build
