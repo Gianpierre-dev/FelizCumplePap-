@@ -12,14 +12,10 @@ const { imagen, frase, familiar } = Astro.props;
 const fuente = resolverImagen(imagen);
 const textoAlternativo = frase ?? (familiar ? `Recuerdo con ${familiar}` : "Recuerdo familiar");
 ---
-<section class="foto-escena flex min-h-screen flex-col items-center justify-center gap-7 px-5 py-16">
-  <div class="revelar flex flex-col items-center gap-7">
-    <figure class="foto-impresa m-0 bg-white p-3 pb-4">
-      <Image
-        src={fuente}
-        alt={textoAlternativo}
-        class="block h-auto max-h-[64vh] w-auto max-w-full"
-      />
+<section class="foto-escena flex flex-col items-center px-6 py-7">
+  <div class="revelar flex w-full max-w-md flex-col items-center gap-4">
+    <figure class="foto-impresa m-0 w-full bg-white p-3 pb-4">
+      <Image src={fuente} alt={textoAlternativo} class="block h-auto w-full" />
       {familiar && (
         <figcaption class="pt-2 text-center font-manuscrita text-xl leading-none text-tinta-suave">
           con {familiar}

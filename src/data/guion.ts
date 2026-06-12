@@ -24,6 +24,7 @@ export const guion: Escena[] = [
   { tipo: "frase", texto: "Cada momento contigo es un regalo." },
   { tipo: "foto", imagen: "foto-07.webp", frase: "Hasta una ida al cine contigo es una fiesta." },
   { tipo: "foto", imagen: "foto-09.webp" },
+  { tipo: "foto", imagen: "afrika.webp", frase: "Y Afrika también te extraña." },
 
   // ── Capítulo 3: Las aventuras ──
   { tipo: "frase", texto: "Y cuántos caminos recorrimos juntos…" },
@@ -46,5 +47,5 @@ export const dedicatoria = {
   texto:
     "Papá, hoy desde el Perú te abrazamos fuerte. Gracias por ser nuestro ejemplo. " +
     "Aunque el mar nos separe, te llevamos siempre con nosotros. Feliz cumpleaños.",
-  firma: "Gaby, Cesar, Steven y Gianpierre",
+  firma: "Gaby, Cesar, Steven, Gianpierre y Afrika",
 };

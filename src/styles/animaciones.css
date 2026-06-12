@@ -41,17 +41,11 @@
   to { transform: scale(1.08) translateY(-2%); }
 }
 
-/* Fotos como impresiones pegadas en el álbum: rotación alternada y sombra. */
+/* Fotos como impresiones del álbum: marco uniforme y sombra suave. */
 .foto-impresa {
   box-shadow:
     0 1px 3px rgb(74 56 38 / 0.18),
-    0 12px 28px -8px rgb(74 56 38 / 0.35);
-}
-.foto-escena:nth-of-type(odd) .foto-impresa {
-  transform: rotate(-1.5deg);
-}
-.foto-escena:nth-of-type(even) .foto-impresa {
-  transform: rotate(1.5deg);
+    0 10px 24px -10px rgb(74 56 38 / 0.32);
 }
 
 /* Ornamento divisor de capítulos */
