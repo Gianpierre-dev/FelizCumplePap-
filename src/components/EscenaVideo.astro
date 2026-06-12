@@ -22,10 +22,10 @@ const fuentePoster = resolverPoster(poster);
       preload="metadata"
     ></video>
     {familiar && (
-      <span class="absolute bottom-4 left-4 z-10 rounded-full border border-granate bg-crema/90 px-3 py-1 text-xs text-granate">
-        📍 con {familiar}
+      <span class="absolute bottom-4 left-4 z-10 rounded-sm bg-crema/90 px-3 py-1 font-manuscrita text-lg leading-none text-granate">
+        con {familiar}
       </span>
     )}
   </div>
-  {frase && <p class="revelar bg-crema px-6 py-5 text-center font-titulo text-lg text-tinta">{frase}</p>}
+  {frase && <p class="revelar bg-crema px-6 py-5 text-center font-manuscrita text-2xl text-tinta">{frase}</p>}
 </section>

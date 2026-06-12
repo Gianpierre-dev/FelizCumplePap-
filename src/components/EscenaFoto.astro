@@ -10,15 +10,24 @@ interface Props {
 }
 const { imagen, frase, familiar } = Astro.props;
 const fuente = resolverImagen(imagen);
+const textoAlternativo = frase ?? (familiar ? `Recuerdo con ${familiar}` : "Recuerdo familiar");
 ---
-<section class="relative flex min-h-screen flex-col">
-  <div class="relative flex-1 overflow-hidden">
-    <Image src={fuente} alt={frase ?? (familiar ? `Recuerdo con ${familiar}` : "Recuerdo familiar")} class="parallax h-full w-full object-cover" />
-    {familiar && (
-      <span class="absolute bottom-4 left-4 rounded-full border border-granate bg-crema/90 px-3 py-1 text-xs text-granate">
-        📍 con {familiar}
-      </span>
+<section class="foto-escena flex min-h-screen flex-col items-center justify-center gap-7 px-5 py-16">
+  <div class="revelar flex flex-col items-center gap-7">
+    <figure class="foto-impresa m-0 bg-white p-3 pb-4">
+      <Image
+        src={fuente}
+        alt={textoAlternativo}
+        class="block h-auto max-h-[64vh] w-auto max-w-full"
+      />
+      {familiar && (
+        <figcaption class="pt-2 text-center font-manuscrita text-xl leading-none text-tinta-suave">
+          con {familiar}
+        </figcaption>
+      )}
+    </figure>
+    {frase && (
+      <p class="max-w-sm text-center font-manuscrita text-2xl leading-snug text-tinta">{frase}</p>
     )}
   </div>
-  {frase && <p class="revelar bg-crema px-6 py-5 text-center font-titulo text-lg text-tinta">{frase}</p>}
 </section>

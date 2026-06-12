@@ -9,20 +9,23 @@ function iniciarExperiencia(): void {
   const botonComenzar = document.querySelector<HTMLButtonElement>("[data-comenzar]");
   const portada = document.querySelector<HTMLElement>("[data-portada]");
 
+  const botonMute = document.querySelector<HTMLButtonElement>("[data-mute]");
+
   botonComenzar?.addEventListener("click", () => {
     void audio?.play().catch(() => undefined);
     portada?.classList.add("oculto");
     document.body.style.overflow = "auto";
     portada?.setAttribute("inert", "");
     document.querySelector<HTMLElement>("main")?.focus();
+    botonMute?.classList.add("sonando");
   });
 
-  const botonMute = document.querySelector<HTMLButtonElement>("[data-mute]");
   botonMute?.addEventListener("click", () => {
     if (!audio) return;
     audio.muted = !audio.muted;
     botonMute.setAttribute("aria-pressed", String(audio.muted));
     botonMute.textContent = audio.muted ? "🔇" : "🔊";
+    botonMute.classList.toggle("sonando", !audio.muted);
   });
 }
 

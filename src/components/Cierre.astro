@@ -3,13 +3,16 @@ import EscudoU from "../assets/escudo-u.svg";
 import { dedicatoria } from "../data/guion";
 ---
 <section class="flex min-h-screen flex-col items-center justify-center bg-crema px-8 text-center">
-  <EscudoU
-    width={84}
-    height={84}
-    role="img"
-    aria-label="Escudo del Club Universitario de Deportes"
-    class="revelar mb-6"
-  />
+  <div class="revelar relative mb-6">
+    <div class="absolute -inset-6 rounded-full bg-granate/10 blur-xl" aria-hidden="true"></div>
+    <EscudoU
+      width={84}
+      height={84}
+      role="img"
+      aria-label="Escudo del Club Universitario de Deportes"
+      class="relative"
+    />
+  </div>
   <h2 class="font-titulo text-2xl font-semibold text-tinta">Te queremos, papá</h2>
   <p class="mt-1 text-sm text-tinta-suave">{dedicatoria.firma}</p>
   <button

@@ -41,10 +41,49 @@
   to { transform: scale(1.08) translateY(-2%); }
 }
 
+/* Fotos como impresiones pegadas en el álbum: rotación alternada y sombra. */
+.foto-impresa {
+  box-shadow:
+    0 1px 3px rgb(74 56 38 / 0.18),
+    0 12px 28px -8px rgb(74 56 38 / 0.35);
+}
+.foto-escena:nth-of-type(odd) .foto-impresa {
+  transform: rotate(-1.5deg);
+}
+.foto-escena:nth-of-type(even) .foto-impresa {
+  transform: rotate(1.5deg);
+}
+
+/* Ornamento divisor de capítulos */
+.ornamento {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-granate);
+  font-size: 0.9rem;
+}
+.ornamento::before,
+.ornamento::after {
+  content: "";
+  width: 3.5rem;
+  height: 1px;
+  background: color-mix(in srgb, var(--color-granate) 45%, transparent);
+}
+
+/* Latido del control de música mientras suena la canción */
+.sonando {
+  animation: latido 2.4s ease-in-out infinite;
+}
+@keyframes latido {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(110 31 46 / 0.35); }
+  50% { box-shadow: 0 0 0 9px rgb(110 31 46 / 0); }
+}
+
 /* Respeto a usuarios que reducen movimiento */
 @media (prefers-reduced-motion: reduce) {
   .revelar,
-  .parallax {
+  .parallax,
+  .sonando {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
