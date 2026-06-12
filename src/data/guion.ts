@@ -13,15 +13,17 @@ export const guion: Escena[] = [
   { tipo: "frase", texto: "Aunque hoy estés lejos, toda tu familia está contigo." },
   { tipo: "foto", imagen: "foto-02.webp", frase: "Celebrar contigo siempre fue lo mejor." },
   { tipo: "foto", imagen: "foto-03.webp" },
+  { tipo: "video", video: "video-02.mp4", poster: "video-02.webp", frase: "Sopla la velita, papá." },
   { tipo: "foto", imagen: "foto-06.webp" },
   { tipo: "foto", imagen: "foto-04.webp", frase: "Tus tres hijos, siempre a tu lado." },
   { tipo: "foto", imagen: "foto-05.webp" },
+  { tipo: "video", video: "video-01.mp4", poster: "video-01.webp" },
+  { tipo: "video", video: "video-03.mp4", poster: "video-03.webp" },
 
   // ── Capítulo 2: Lo cotidiano ──
   { tipo: "frase", texto: "Cada momento contigo es un regalo." },
   { tipo: "foto", imagen: "foto-07.webp", frase: "Hasta una ida al cine contigo es una fiesta." },
   { tipo: "foto", imagen: "foto-09.webp" },
-  { tipo: "video", video: "video-01.mp4", poster: "video-01.webp" },
 
   // ── Capítulo 3: Las aventuras ──
   { tipo: "frase", texto: "Y cuántos caminos recorrimos juntos…" },
