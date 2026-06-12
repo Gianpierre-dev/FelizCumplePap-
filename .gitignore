@@ -24,4 +24,4 @@ pnpm-debug.log*
 .idea/
 
 # Originales pesados (no se versionan; insumos locales)
-fotos/
+/fotos/

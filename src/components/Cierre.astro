@@ -15,8 +15,12 @@ import { dedicatoria } from "../data/guion";
   <button
     type="button"
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-    class="mt-6 rounded-full border border-granate px-5 py-2 text-sm font-semibold text-granate hover:bg-granate hover:text-crema"
+    class="mt-6 inline-flex items-center gap-1.5 rounded-full border border-granate px-5 py-2 text-sm font-semibold text-granate hover:bg-granate hover:text-crema"
   >
-    🔁 Volver a ver
+    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 2v6h6" />
+      <path d="M21 12A9 9 0 0 0 6 5.3L3 8" />
+    </svg>
+    Volver a ver
   </button>
 </section>

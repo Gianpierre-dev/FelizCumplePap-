@@ -10,12 +10,25 @@ export type Escena =
 // Editar AQUÍ no requiere tocar componentes.
 export const guion: Escena[] = [
   { tipo: "frase", texto: "Aunque hoy estés lejos, toda tu familia está contigo." },
-  { tipo: "foto", imagen: "foto-01.webp", frase: "Donde empezó todo." },
-  { tipo: "foto", imagen: "foto-02.webp", familiar: "mamá" },
-  { tipo: "foto", imagen: "foto-03.webp", familiar: "Cesar" },
-  { tipo: "video", video: "video-01.mp4", poster: "video-01.webp", familiar: "Steven" },
-  { tipo: "foto", imagen: "foto-04.webp", frase: "Gracias por tanto." },
-  // El usuario completará el resto con sus 15 fotos + 3 videos.
+  { tipo: "foto", imagen: "foto-01.webp" },
+  { tipo: "foto", imagen: "foto-02.webp" },
+  { tipo: "foto", imagen: "foto-03.webp" },
+  { tipo: "foto", imagen: "foto-04.webp" },
+  { tipo: "foto", imagen: "foto-05.webp" },
+  { tipo: "frase", texto: "Cada recuerdo contigo es un regalo." },
+  { tipo: "foto", imagen: "foto-06.webp" },
+  { tipo: "foto", imagen: "foto-07.webp" },
+  { tipo: "foto", imagen: "foto-08.webp" },
+  { tipo: "video", video: "video-01.mp4", poster: "video-01.webp" },
+  { tipo: "foto", imagen: "foto-09.webp" },
+  { tipo: "foto", imagen: "foto-10.webp" },
+  { tipo: "frase", texto: "La distancia no borra lo que somos: tu familia." },
+  { tipo: "foto", imagen: "foto-11.webp" },
+  { tipo: "foto", imagen: "foto-12.webp" },
+  { tipo: "foto", imagen: "foto-13.webp" },
+  { tipo: "foto", imagen: "foto-14.webp" },
+  { tipo: "foto", imagen: "foto-15.webp", frase: "Gracias por tanto, papá." },
+  // Ajusta libremente: frases, orden y pies de foto (familiar: "mamá", "Cesar", "Steven", etc.).
 ];
 
 export const dedicatoria = {
